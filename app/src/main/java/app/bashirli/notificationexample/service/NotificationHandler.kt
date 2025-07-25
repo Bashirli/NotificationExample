@@ -151,7 +151,7 @@ class NotificationHandler @Inject constructor(
         var progress = 0
 
         //These lanes just for simulate delivery.
-        CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.IO).launch {
             DeliveryStatusEnum.entries.fastForEach { deliveryStatus ->
                 while(
                     when(deliveryStatus){
